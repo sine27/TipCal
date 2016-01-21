@@ -207,11 +207,11 @@
                                                     <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S9w-Ia-Iiz"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FA4-Na-CcN">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FA4-Na-CcN">
                                                 <rect key="frame" x="300" y="0.0" width="150" height="100"/>
-                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="36"/>
-                                                <state key="normal" title="&lt;">
-                                                    <color key="titleColor" white="1" alpha="0.79878771551724137" colorSpace="calibratedWhite"/>
+                                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="&lt;" image="Back">
+                                                    <color key="titleColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iPa-RF-wAg"/>
@@ -351,6 +351,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Back" width="23" height="17"/>
         <image name="background" width="1143" height="2013"/>
     </resources>
 </document>
