@@ -69,6 +69,7 @@ class ViewController: UIViewController {
     
     @IBAction func percentageSelected(sender: AnyObject) {
         percentageDisplay.text = sender.currentTitle
+        calculate()
     }
     
     
@@ -108,6 +109,11 @@ class ViewController: UIViewController {
     
     @IBAction func percentageButtonTapped(sender: AnyObject) {
         
+        calculate()
+    }
+    
+    func calculate () {
+        
         let bill : Double = NSNumberFormatter().numberFromString(amountDisplay.text!)!.doubleValue
         let divide = NSNumberFormatter().numberFromString( dividerDisplay.text!)!.doubleValue
         
@@ -118,7 +124,6 @@ class ViewController: UIViewController {
         } else if ( percentageDisplay.text == "20%" ) {
             resultDisplay.text = "\( round((bill * 1.20 / divide) * 100) / 100 )"
         }
-        
     }
 
 }
