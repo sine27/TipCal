@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var thirdLineStack: UIStackView!
     @IBOutlet weak var fourthLineStack: UIStackView!
     @IBOutlet weak var stackHight: NSLayoutConstraint!
+    @IBOutlet weak var displayHeight: NSLayoutConstraint!
     @IBOutlet weak var resultHeight: NSLayoutConstraint!
     @IBOutlet weak var dividerWidth: NSLayoutConstraint!
     @IBOutlet weak var dividerLabelWidth: NSLayoutConstraint!
@@ -45,14 +46,12 @@ class ViewController: UIViewController {
         resultDisplay.minimumScaleFactor = 0.5;
         resultDisplay.adjustsFontSizeToFitWidth = true;
         
-        let lineStackHeight = 0.157 * UIScreen.mainScreen().bounds.height
+        let lineStackHeight = 0.155 * UIScreen.mainScreen().bounds.height
         let lineStackWidth = 1 / 3 * UIScreen.mainScreen().bounds.width
-        
+        resultHeight.constant = 1.2 * displayHeight.constant
         stackHight.constant = lineStackHeight
-        resultHeight.constant = 1.15 * lineStackHeight
         dividerWidth.constant = lineStackWidth - 20
         dividerLabelWidth.constant = lineStackWidth - 20
-        
     }
 
     @IBAction func dividerTapped (sender: AnyObject) {
