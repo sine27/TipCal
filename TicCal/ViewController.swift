@@ -39,6 +39,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -118,8 +122,8 @@ class ViewController: UIViewController {
         
         if ( percentageDisplay.text == "15%" ) {
             resultDisplay.text = "\( round((bill * 1.15 / divide) * 100) / 100 )"
-        } else if ( percentageDisplay.text == "18%" ) {
-            resultDisplay.text = "\( round((bill * 1.18 / divide) * 100) / 100 )"
+        } else if ( percentageDisplay.text == "7%" ) {
+            resultDisplay.text = "\( round((bill * 1.07 / divide) * 100) / 100 )"
         } else if ( percentageDisplay.text == "20%" ) {
             resultDisplay.text = "\( round((bill * 1.20 / divide) * 100) / 100 )"
         }
